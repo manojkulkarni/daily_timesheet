@@ -1,0 +1,25 @@
+Users
+
+id                            		1 1 manoj 1
+designation_id                          2 1 ramesh 2
+user_name				3 2 prasad 1
+city_id                                 4 2 shashi 2
+password
+salt
+
+Designations
+id				      1 manager
+designation			      2 employee
+
+Cities
+id	                               1 pune
+ciry_name			       2 mumbai
+
+Timesheets
+id	                              1 1 13/08/2013 10 11 design
+user_id				      2 1 13/08/2013 11 01 high level des
+date				      3 1 13/08/2013 01 03 lunch 
+time_frm			      .
+time_to                               .
+task
+

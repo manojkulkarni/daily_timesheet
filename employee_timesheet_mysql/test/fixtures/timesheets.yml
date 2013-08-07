@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date: 2013-08-07
+  time_from: 2013-08-07 10:17:03
+  time_to: 2013-08-07 10:17:03
+  task: MyString
+
+two:
+  date: 2013-08-07
+  time_from: 2013-08-07 10:17:03
+  time_to: 2013-08-07 10:17:03
+  task: MyString
