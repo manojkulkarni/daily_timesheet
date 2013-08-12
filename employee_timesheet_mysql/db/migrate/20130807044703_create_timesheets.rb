@@ -5,7 +5,7 @@ class CreateTimesheets < ActiveRecord::Migration
       t.time :time_from
       t.time :time_to
       t.string :task
-
+      t.integer :user_id
       t.timestamps
     end
   end

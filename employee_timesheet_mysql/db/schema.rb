@@ -11,12 +11,38 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130806111308) do
+ActiveRecord::Schema.define(:version => 20130807044703) do
+
+  create_table "cities", :force => true do |t|
+    t.string   "city_name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "designations", :force => true do |t|
+    t.string   "designation"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "timesheets", :force => true do |t|
+    t.date     "date"
+    t.time     "time_from"
+    t.time     "time_to"
+    t.string   "task"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "user_name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "password"
+    t.string   "salt"
+    t.integer  "designation_id"
+    t.integer  "city_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
 end
