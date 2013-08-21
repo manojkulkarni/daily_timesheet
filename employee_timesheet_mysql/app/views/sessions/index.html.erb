@@ -1,7 +1,7 @@
-<div style="margin-top: 10%;margin-left: 30%">
-  Please Login Here
+<div class="loginForm">
+  <h3>Login Here</h3>
   <%= form_for :user, :url => sessions_path do |f| %>
-    <table>
+    <table class="tableLogin">
       <tr>
         <td>User Name: </td>
         <td><%= f.text_field :user_name %><br/></td>

@@ -10,14 +10,96 @@
  *
  *= require_self
  *= require_tree .
- */
+*/
 
- .success {
-     color: green;
-     font-size: large;
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.success {
+    color: green;
+    font-size: large;
 }
 
 .alert {
-     color: red;
-     font-size: large;
+    color: red;
+    font-size: large;
+}
+
+.tableLogin{
+    table-layout: auto;
+    margin-top: 5px;
+    border-style: solid;
+    border-color: lightcyan;
+}
+
+.loginForm{
+    position: absolute;
+    top: 45%;
+    left: 36%;
+}
+
+.applicationDiv{
+    height: auto;
+    width: auto;
+}
+
+.header{
+    background-color: yellow;
+    height: 80px;
+    margin-top: 0px;
+    margin-left: 1px;
+    width: 100%;
+}
+
+.footer{
+    background-color: yellow;
+    height: 20px;
+    width: 100%;
+    position:absolute;
+    bottom: 0px;
+}
+
+.footerText{
+    text-align: center;
+    color: red;
+}
+
+.loginHeader{
+    padding-top: 2%;
+    margin-left: 100px;
+    text-align: left;
+    color: gray;
+}
+
+.mainHeaderText{
+    padding-left: 10px;
+    color: gray;
+}
+
+.mainLogo{
+    height: inherit;
+    width: auto;
+}
+
+.logoDiv{
+    float: left;
+    height: inherit;
+}
+
+.mainNameText{
+    padding-top: 10px;;
+    padding-left: 10px;
+    text-align: left;
+    color: gray;
+}
+
+.headerTextContaint{
+/*    float: left;*/
+}
+
+.logoutDiv{
+    text-align: right;
+    padding-right: 1%;
 }

@@ -1,0 +1,22 @@
+<div class="logoDiv"><%= image_tag("sample2.png", :class => "mainLogo") %></div>
+<% if controller_name.eql?('sessions') && action_name.eql?('index') %>
+  <div>
+    <h2>
+      <p class="loginHeader">
+        Time-sheet Application
+      </p>
+    </h2>
+    <marquee>
+      <p class="loginHeader">
+        Fill-up your time-sheet and get approved from your manager right here.
+      </p>
+    </marquee>
+  </div>
+<% else %>
+  <div class="headerTextContaint">
+    <h4 class="mainNameText"> Hi, <%= session[:user].user_name.capitalize %> </h4>
+    <h2><p class="mainHeaderText"> Welcome to Time-sheet Application</p></h2>
+    <div class="logoutDiv"><%= link_to "Logout", session_path(session[:user]), :method => 'delete' %></div>
+  </div>
+<% end %>
+<div align="right">date: <%= Date.today.to_s(:standard) %></div>
