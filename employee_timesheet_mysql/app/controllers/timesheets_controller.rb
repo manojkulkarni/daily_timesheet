@@ -2,6 +2,11 @@ class TimesheetsController < ApplicationController
 
   def index
     @time_records = Timesheet.find_all_by_user_id_and_date(session[:user][:id],Date.today)
+    @timesheet = Timesheet.new
+  end
+
+  def new
+    @timesheet = Timesheet.new
   end
 
   def create
@@ -12,7 +17,11 @@ class TimesheetsController < ApplicationController
   end
 
   def edit
-    @user = Timesheet.find_by_id(params[:id])
+    @timesheet = Timesheet.find_by_id(params[:id])
+  end
+
+  def update
+    raise 'hi'
   end
 
   def destroy
