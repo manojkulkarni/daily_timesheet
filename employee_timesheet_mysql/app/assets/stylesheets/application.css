@@ -17,6 +17,10 @@
     padding: 0px;
 }
 
+h2{
+    color: gray;
+}
+
 .success {
     color: green;
     font-size: large;
@@ -102,4 +106,30 @@
 .logoutDiv{
     text-align: right;
     padding-right: 1%;
+}
+
+.timeSheetTable{
+    background-color: paleturquoise;
+}
+
+.timeSheetTable td{
+    padding-left: 10px;
+    width: 10%;
+    background-color: powderblue;
+    text-align: center;
+}
+.timeSheetTable th{
+    background-color: skyblue;
+}
+
+.timeSheetTableDiv{
+    padding-top: 20px;
+}
+
+.timeCell{
+    width: 80px;
+}
+
+.timesheetFilledTable{
+    
 }

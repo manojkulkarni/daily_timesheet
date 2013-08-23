@@ -13,3 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+$(function ($) {
+
+
+        $( "#timesheet_date" ).datepicker({ dateFormat: 'dd-mm-yy' });
+    
+//    $("#timesheet_date").on("click", function(){
+//        $("#timesheet_date").datepicker()
+//    });
+        
+})

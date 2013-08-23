@@ -1,6 +1,6 @@
 
 datetime_formats = {
-  :standard => "%b %d, %Y"
+  :standard => "%d-%m-%Y"
 }
 Date::DATE_FORMATS.merge!(
   datetime_formats.merge(
