@@ -1,14 +1,12 @@
 <div id="current_form">
   <%= form_for @timesheet do |f| %>
     <div class="timeSheetTableDiv">
-      <table class="timeSheetTable">
         <tr>
-          <td> Time from: <%= f.text_field :time_from, :placeholder => get_placeholder(@user,'time_from','HH:MM'), :class => "timeCell" %></td>
-          <td> Time to: <%= f.text_field :time_to, :placeholder => get_placeholder(@user,'time_to','HH:MM'), :class => "timeCell" %></td>
-          <td> Task: <%= f.text_field :task, :placeholder => get_placeholder(@user,'task','Task'), :size => 70 %></td>
-            <td> <%= f.submit 'Submit' %> </td>
+          <td><%= f.text_field :time_from, :placeholder => get_placeholder(@user,'time_from','HH:MM'), :class => "timeCell" %></td>
+          <td><%= f.text_field :time_to, :placeholder => get_placeholder(@user,'time_to','HH:MM'), :class => "timeCell" %></td>
+          <td><%= f.text_field :task, :placeholder => get_placeholder(@user,'task','Task'), :size => 70 %></td>
+            <td><%= f.submit 'Add' %> </td>
         </tr>
-      </table>
     </div>
   <% end %>
 </div>

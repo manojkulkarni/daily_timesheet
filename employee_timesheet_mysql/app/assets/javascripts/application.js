@@ -17,8 +17,11 @@
 
 $(function ($) {
 
-
-        $( "#timesheet_date" ).datepicker({ dateFormat: 'dd-mm-yy' });
+          $("#timesheet_date" ).datepicker({dateFormat: 'dd-mm-yy'});
+//          $(".timesheet_date").on("change",function(){
+//              this.page.submit();
+//          })
+        
     
 //    $("#timesheet_date").on("click", function(){
 //        $("#timesheet_date").datepicker()

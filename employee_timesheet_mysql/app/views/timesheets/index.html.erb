@@ -1,5 +1,8 @@
-<h2> Fill up todays Time-sheet details here. </h2>
-<div align="right">Todays date: <%= Date.today.strftime("%d-%m-%Y") %></div>
+<h3> Fill up todays Time-sheet details here. </h3>
+<div align="center">
+  Select date: <%= text_field_tag 'timesheet_date', Date.today.strftime("%d-%m-%Y") ,:class => "timesheet_date" %>
+</div>
+
 <div id="todays_filled_list">
   <table class="timeSheetTable">
     <tr>
@@ -16,6 +19,6 @@
         <td><%= link_to 'Edit', edit_timesheet_path(rec.id) %> / <%= link_to 'Delete', timesheet_path(rec.id), :method => 'delete', :confirm => 'Record will be deleted. Are you sure?' %> </td>
       </tr>
     <% end %>
+    <%= render 'timesheet_form' %>
   </table>
 </div>
-<%= render 'timesheet_form' %>
