@@ -1,12 +1,24 @@
 <div id="current_form">
   <%= form_for @timesheet do |f| %>
     <div class="timeSheetTableDiv">
+      <% if action_name.eql?('edit') %>
+        <table class="timeSheetTable">
+          <tr>
+            <th> Updated time from </th>
+            <th> Updated time to </th>
+            <th> Updated task done </th>
+            <th> Update </th>
+          </tr>
+        <% end %>
         <tr>
           <td><%= f.text_field :time_from, :placeholder => get_placeholder(@user,'time_from','HH:MM'), :class => "timeCell" %></td>
           <td><%= f.text_field :time_to, :placeholder => get_placeholder(@user,'time_to','HH:MM'), :class => "timeCell" %></td>
           <td><%= f.text_field :task, :placeholder => get_placeholder(@user,'task','Task'), :size => 70 %></td>
-            <td><%= f.submit 'Add' %> </td>
+          <td><%= f.submit action_name.eql?('edit') ? 'Update' : 'Add' %> </td>
         </tr>
+        <% if action_name.eql?('edit') %>
+        </table>
+      <% end %>
     </div>
   <% end %>
 </div>

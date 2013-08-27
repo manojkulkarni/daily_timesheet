@@ -1,0 +1,16 @@
+<div class="timeSheetTableDiv">
+  <table class="timeSheetTable">
+    <tr>
+      <th>Employee Id</th>
+      <th>Employee Name</th>
+      <th>View Time-sheet</th>
+    </tr>
+     <% @users.each do |user| %>
+      <tr>
+        <td> <%= user.id %> </td>
+        <td> <%= user.user_name %> </td>
+        <td> <%= link_to 'View Time-sheet', timesheet_path(user.id) %> </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

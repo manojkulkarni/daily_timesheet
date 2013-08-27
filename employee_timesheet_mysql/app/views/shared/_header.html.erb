@@ -17,8 +17,10 @@
     <h4 class="mainNameText"> Hi, <%= session[:user].user_name.capitalize %> </h4>
     <h2><p class="mainHeaderText"> Welcome to Time-sheet Application</p></h2>
     <div class="logoutDiv">
-      <%= link_to 'Todays time-sheet', timesheets_path, :class => 'menuOptios'%>
+      <% unless session[:user][:designation_id].eql?(1) %>
+        <%= link_to 'To Approve/Reject', users_path, :class => 'menuOptios'%>
+      <% end %>
+      <%= link_to 'Your time-sheet', timesheets_path, :class => 'menuOptios'%>
       <%= link_to "Logout", session_path(session[:user]), :method => 'delete' %></div>
   </div>
-<div align="right">Todays date: <%= Date.today.strftime("%d-%m-%Y") %></div>
 <% end %>

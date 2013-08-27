@@ -50,7 +50,7 @@ h1,h2,h3{
 }
 
 .header{
-    background-color: yellow;
+    background-color: #FED81C;
     height: 80px;
     margin-top: 0px;
     margin-left: 1px;
@@ -58,7 +58,7 @@ h1,h2,h3{
 }
 
 .footer{
-    background-color: yellow;
+    background-color: #FED81C;
     height: 20px;
     width: 100%;
     position:absolute;
