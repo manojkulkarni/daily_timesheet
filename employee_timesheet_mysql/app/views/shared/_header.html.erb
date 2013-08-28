@@ -18,7 +18,7 @@
     <h2><p class="mainHeaderText"> Welcome to Time-sheet Application</p></h2>
     <div class="logoutDiv">
       <% unless session[:user][:designation_id].eql?(1) %>
-        <%= link_to 'To Approve/Reject', users_path, :class => 'menuOptios'%>
+        <%= link_to 'Employees timesheets', users_path, :class => 'menuOptios'%>
       <% end %>
       <%= link_to 'Your time-sheet', timesheets_path, :class => 'menuOptios'%>
       <%= link_to "Logout", session_path(session[:user]), :method => 'delete' %></div>

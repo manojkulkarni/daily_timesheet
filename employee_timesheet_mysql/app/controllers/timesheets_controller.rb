@@ -8,7 +8,7 @@ class TimesheetsController < ApplicationController
 
   def show
 #    @user_data = Timesheet.find_all_by_user_id(params[:id])
-    @user_data = Timesheet.where("user_id = #{params[:id]}").select('*').group('date')
+    @user_data = Timesheet.where("user_id = #{params[:id]}").select('*').order('date')
 #    raise @user_data.inspect
   end
 
