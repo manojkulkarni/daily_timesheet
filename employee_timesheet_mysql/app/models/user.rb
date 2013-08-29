@@ -1,9 +1,12 @@
 class User < ActiveRecord::Base
-  attr_accessible :password, :salt, :user_name, :designation_id, :city_id
+  attr_accessible :password, :salt, :user_name, :designation_id, :city_id, :password_confirm
+  attr_accessor :password_confirm
   belongs_to :designation
   belongs_to :city
   has_many :timesheets
-
+  validates :user_name, :presence => true
+  validates :password, :presence => true
+  validates :password_confirm, :confirmation => true
 
   def self.authenticate_user(user)
     original_user = User.find_by_user_name(user[:user_name])

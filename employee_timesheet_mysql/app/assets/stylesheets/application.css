@@ -40,7 +40,7 @@ h1,h2,h3{
 
 .loginForm{
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 36%;
 }
 
@@ -55,6 +55,9 @@ h1,h2,h3{
     margin-top: 0px;
     margin-left: 1px;
     width: 100%;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: medium;
 }
 
 .footer{
@@ -63,6 +66,9 @@ h1,h2,h3{
     width: 100%;
     position:absolute;
     bottom: 0px;
+    border-top-color: black;
+    border-top-style: solid;
+    border-top-width: medium;
 }
 
 .footerText{
@@ -141,4 +147,14 @@ h1,h2,h3{
     font-family: fantasy;
     font-style: oblique;
     color: gray;
+}
+
+.signupForm{
+    position: absolute;
+    top: 25%;
+    left: 32%;
+}
+
+.signupForm table tr td{
+    padding: 10px;
 }

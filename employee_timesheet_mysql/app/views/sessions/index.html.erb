@@ -12,7 +12,8 @@
       </tr>
       <tr>
         <td></td>
-        <td><%= f.submit 'Login' %></td>
+        <td> <p style="font-size: small"><%= f.submit 'Login' %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           New User? <%= link_to 'Sign-up', new_user_path %></p></td>
       </tr>
     </table>
   <% end %>

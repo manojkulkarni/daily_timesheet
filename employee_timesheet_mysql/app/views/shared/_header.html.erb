@@ -1,16 +1,11 @@
 <div class="logoDiv"><%= image_tag("sample2.png", :class => "mainLogo") %></div>
-<% if controller_name.eql?('sessions') && action_name.eql?('index') %>
+<% if controller_name.eql?('sessions') && action_name.eql?('index') || controller_name.eql?('users') && action_name.eql?('new') %>
   <div>
     <h2>
       <p class="loginHeader">
         Time-sheet Application
       </p>
     </h2>
-    <marquee>
-      <p class="loginHeader">
-        Fill-up your time-sheet and get approved from your manager right here.
-      </p>
-    </marquee>
   </div>
 <% else %>
   <div class="headerTextContaint">
