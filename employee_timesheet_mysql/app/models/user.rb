@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :password, :salt, :user_name, :designation_id, :city_id, :password_confirm
+  attr_accessible :password, :salt, :user_name, :designation_id, :city_id
   attr_accessor :password_confirm
   belongs_to :designation
   belongs_to :city

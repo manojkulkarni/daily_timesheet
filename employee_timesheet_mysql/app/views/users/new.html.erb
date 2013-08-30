@@ -2,36 +2,36 @@
   <p><b> Please Fill-up the following information </b><br/></p>
   <tr></tr>
   <%= form_for @user do |f| %>
-  <table class="tableLogin">
-    <tr>
-      <td> User name: </td>
-      <td> <%= f.text_field :user_name %> </td>
-    </tr>
-    <tr></tr>
-    <tr>
-      <td> Designation: </td>
-      <td> <%= f.select :designation, @designations %> </td>
-    </tr>
-    <tr></tr>
-    <tr>
-      <td> City: </td>
-      <td> <%= f.select :city, @cities %> </td>
-    </tr>
-    <tr></tr>
-    <tr>
-      <td> Password: </td>
-      <td> <%= f.password_field :password %> </td>
-    </tr>
-    <tr></tr>
-    <tr>
-      <td> Confirm password: </td>
-      <td> <%= f.password_field :password_confirm %> </td>
-    </tr>
-    <tr></tr>
-    <tr>
-      <td> </td>
-      <td> <%= f.submit 'Create Account' %> </td>
-    </tr>
-  </table>
+    <table class="tableLogin">
+      <tr>
+        <td> User name: </td>
+        <td> <%= f.text_field :user_name %> </td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td> Designation: </td>
+        <td> <%= f.select :designation, @designations %> </td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td> City: </td>
+        <td> <%= f.select :city, @cities %> </td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td> Password: </td>
+        <td> <%= f.password_field :password %> </td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td> Confirm password: </td>
+        <td> <%= f.password_field :password_confirm %> </td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td> </td>
+        <td> <%= f.submit 'Create Account' %> </td>
+      </tr>
+    </table>
   <% end %>
 </div>

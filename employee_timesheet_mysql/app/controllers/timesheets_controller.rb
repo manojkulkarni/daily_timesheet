@@ -6,12 +6,12 @@ class TimesheetsController < ApplicationController
   end
 
   def show
-    @user_data = Timesheet.where("user_id = #{params[:id]}").select('*').order('date')
+    @user_data = Timesheet.where("user_id = #{params[:id]} and approval_flag = 0").select('*').order('date')
   end
 
   def create
     @time_record = Timesheet.new({:date => params[:timesheet][:date].blank? ? Date.today.strftime("%d-%m-%Y") : params[:timesheet][:date], :time_from => params[:timesheet][:time_from],
-        :time_to => params[:timesheet][:time_to], :task => params[:timesheet][:task], :user_id => session[:user][:id] })
+        :time_to => params[:timesheet][:time_to], :task => params[:timesheet][:task], :user_id => session[:user][:id], :approval_flag => 0 })
     if @time_record.valid?
       @time_record.save
       flash[:notice] = 'Successfuly Added.'

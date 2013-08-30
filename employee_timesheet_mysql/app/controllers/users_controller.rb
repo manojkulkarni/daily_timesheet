@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     designation_id = Designation.get_designation_id(params[:user][:designation])
     city_id = City.get_city_id(params[:user][:city])
     if password_match(params[:user][:password],params[:user][:password_confirm])
-      @user_record = User.new(:user_name => params[:user][:user_name], :password => params[:user][:password], :designation_id => designation_id, :city_id => city_id)
+      @user_record = User.new(:user_name => params[:user][:user_name], :password => params[:user][:password], :designation_id => designation_id, :city_id => city_id )
       if @user_record.valid?
         @user_record.save
         flash[:notice] = 'Successfuly created the user. Please wait for admin communication.'

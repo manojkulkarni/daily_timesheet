@@ -3,4 +3,6 @@ EmployeeTimesheetMysql::Application.routes.draw do
   resources :sessions
   resources :timesheets
   resources :users
+  resources :approvals
+  resources :rejects
 end
