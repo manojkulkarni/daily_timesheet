@@ -1,12 +1,14 @@
 class TimesheetsController < ApplicationController
   
   def index
+    @search_date = Timesheet.new
     @time_records = Timesheet.find_all_by_user_id_and_date(session[:user][:id],Date.today)
     @timesheet = Timesheet.new
   end
 
   def show
     @user_data = Timesheet.where("user_id = #{params[:id]} and approval_flag = 0").select('*').order('date')
+    @user_name = User.where("id = #{params[:id]}").select('user_name')
   end
 
   def create

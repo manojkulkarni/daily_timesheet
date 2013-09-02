@@ -1,0 +1,14 @@
+<table class="timeSheetTable">
+  <tr>
+    <th> Date </th>
+    <th> Approval </th>
+    <th> Check </th>
+  </tr>
+  <% @statuses.each do |status| %>
+    <tr>
+      <td><%= status.date.strftime("%d-%m-%Y") %></td>
+      <td><%= check_approval(status.approval_flag) %></td>
+      <td> wait ... </td>
+    </tr>
+  <% end %>
+</table>

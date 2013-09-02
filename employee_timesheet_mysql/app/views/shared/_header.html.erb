@@ -15,7 +15,8 @@
       <% unless session[:user][:designation_id].eql?(1) %>
         <%= link_to 'Employees timesheets', users_path, :class => 'menuOptios'%>
       <% end %>
-      <%= link_to 'Your time-sheet', timesheets_path, :class => 'menuOptios'%>
+      <%= link_to 'Previous time-sheets status', statuses_path, :class => 'menuOptios' %>
+      <%= link_to 'Todays time-sheet', timesheets_path, :class => 'menuOptios'%>
       <%= link_to "Logout", session_path(session[:user]), :method => 'delete' %></div>
   </div>
 <% end %>

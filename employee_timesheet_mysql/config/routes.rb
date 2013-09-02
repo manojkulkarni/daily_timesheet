@@ -5,4 +5,5 @@ EmployeeTimesheetMysql::Application.routes.draw do
   resources :users
   resources :approvals
   resources :rejects
+  resources :statuses
 end

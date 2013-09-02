@@ -1,5 +1,9 @@
 <% curr_date = nil %>
 <div class="timeSheetTableDiv">
+  <div style="text-align: center">
+    <h3>  Time-sheet for:-  <%= @user_name.first.user_name.to_s %></h3>
+    <br/>
+  </div>
   <table class="timeSheetTable">
     <% @user_data.each do |user| %>
       <% if curr_date.nil? || !curr_date.eql?(user.date) %>
