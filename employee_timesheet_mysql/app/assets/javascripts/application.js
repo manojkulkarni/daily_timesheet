@@ -17,10 +17,22 @@
 
 $(function ($) {
 
-          $("#timesheet_date" ).datepicker({dateFormat: 'dd-mm-yy'});
-//          $(".timesheet_date").on("change",function(){
-//              this.page.submit();
-//          })
+    $("#timesheet_date" ).datepicker({
+        dateFormat: 'dd-mm-yy'
+    });
+
+   $(".timesheet_date").on("change",function(){
+        $.ajax({
+            url: "/timesheets",
+            type: 'GET',
+            datatype: "javascript",
+            data: {
+                date: this.value
+                },
+            success: function(data){}
+        });
+    });
+
         
     
 //    $("#timesheet_date").on("click", function(){

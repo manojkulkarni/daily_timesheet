@@ -14,6 +14,9 @@ class Timesheet < ActiveRecord::Base
       self.where(:id => rec.id).update_all(:approval_flag => flag)
     end
   end
-
+  
+  def self.get_data_by_user_date(user,date)
+    self.find_all_by_user_id_and_date(user,date)
+  end
 
 end

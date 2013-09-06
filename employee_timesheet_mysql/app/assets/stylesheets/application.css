@@ -51,6 +51,7 @@ h1,h2,h3{
 
 .header{
     background-color: #FED81C;
+    position: relative;
     height: 80px;
     margin-top: 0px;
     margin-left: 1px;
@@ -64,7 +65,7 @@ h1,h2,h3{
     background-color: #FED81C;
     height: 20px;
     width: 100%;
-    position:absolute;
+    position:fixed;
     bottom: 0px;
     border-top-color: black;
     border-top-style: solid;

@@ -1,9 +1,17 @@
 class TimesheetsController < ApplicationController
-  
+
   def index
-    @search_date = Timesheet.new
-    @time_records = Timesheet.find_all_by_user_id_and_date(session[:user][:id],Date.today)
-    @timesheet = Timesheet.new
+    @search_date = @timesheet = Timesheet.new
+    @time_records = Timesheet.get_data_by_user_date(session[:user][:id],params[:date].present? ? Date.parse(params[:date]) : Date.today)
+    respond_to do |format|
+      format.js
+      format.html
+    end
+  end
+
+  def date_timesheet
+    @search_date = @timesheet = Timesheet.new
+    @time_records = Timesheet.get_data_by_user_date(session[:user][:id],params[:date].present? ? Date.parse(params[:date]) : Date.today)
   end
 
   def show

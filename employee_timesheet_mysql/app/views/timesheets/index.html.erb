@@ -1,20 +1,8 @@
 <h3> Fill up todays Time-sheet details here. </h3>
+<div align="center">
+  Select date:   <%= text_field_tag 'timesheet_date', Date.today.strftime("%d-%m-%Y") ,:class => "timesheet_date"%>
+</div>
+
 <div id="todays_filled_list">
-  <table class="timeSheetTable">
-    <tr>
-      <th> Time from </th>
-      <th> Time to </th>
-      <th> Task done </th>
-      <th> Edit/Delete</th>
-    </tr>
-    <% @time_records.each do |rec| %>
-      <tr>
-        <td><%= rec.time_from %></td>
-        <td><%= rec.time_to %></td>
-        <td style="width: 29.5%"><%= rec.task %></td>
-        <td><%= link_to 'Edit', edit_timesheet_path(rec.id) %> / <%= link_to 'Delete', timesheet_path(rec.id), :method => 'delete', :confirm => 'Record will be deleted. Are you sure?' %> </td>
-      </tr>
-    <% end %>
-    <%= render 'timesheet_form' %>
-  </table>
+  <%= render "timesheet", time_records: @time_records %>
 </div>
