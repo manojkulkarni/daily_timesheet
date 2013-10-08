@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require_tree .
 
-
 $(function ($) {
 
     $("#timesheet_date" ).datepicker({
@@ -29,7 +28,9 @@ $(function ($) {
             data: {
                 date: this.value
                 },
-            success: function(data){}
+            success: function(data){
+
+            }
         });
     });
 
