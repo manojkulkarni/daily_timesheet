@@ -16,7 +16,7 @@ development:
   pool: 5
   username: root
   password: 
-  socket: /var/run/mysqld/mysqld.sock
+#  socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -28,8 +28,8 @@ test:
   database: employee_timesheet_mysql_test
   pool: 5
   username: root
-  password:
-  socket: /var/run/mysqld/mysqld.sock
+  password: 
+#  socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: mysql2
@@ -38,5 +38,5 @@ production:
   database: employee_timesheet_mysql_production
   pool: 5
   username: root
-  password:
-  socket: /var/run/mysqld/mysqld.sock
+  password: 
+#  socket: /var/run/mysqld/mysqld.sock
