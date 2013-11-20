@@ -12,22 +12,29 @@
   </head>
   <body>
     <div class="applicationDiv">
+
       <div class="header">
         <%= render 'shared/header' %>
       </div>
-      <% if notice %>
-        <div align="center">
-          <div class='success'><%= notice %></div>
-        </div>
-      <% end %>
 
-      <% if alert %>
-        <div align="center">
-          <div class='alert'><%= alert %></div>
-        </div>
-      <% end %>
+      <div class="something">
+        <% if notice %>
+          <div align="center">
+            <div class='success'><%= notice %></div>
+          </div>
+        <% end %>
 
-      <%= yield %>
+        <% if alert %>
+          <div align="center">
+            <div class='alert'><%= alert %></div>
+          </div>
+        <% end %>
+
+
+
+        <%= yield %>
+      </div>
+
       <div class="footer">
         <%= render 'shared/footer' %>
       </div>
