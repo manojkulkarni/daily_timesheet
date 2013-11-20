@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  series_name: MyString
+  : MyString
+  series_location: MyString
+  : MyString
+  series_desc: MyString
+  : MyText
+  series_date_from: MyString
+  : 2013-11-20
+  series_date_to: MyString
+  : 2013-11-20
+  series_result: MyString
+  : MyString
+  series_type: MyString
+  : MyString
+
+two:
+  series_name: MyString
+  : MyString
+  series_location: MyString
+  : MyString
+  series_desc: MyString
+  : MyText
+  series_date_from: MyString
+  : 2013-11-20
+  series_date_to: MyString
+  : 2013-11-20
+  series_result: MyString
+  : MyString
+  series_type: MyString
+  : MyString

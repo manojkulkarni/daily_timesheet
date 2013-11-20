@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  match_date: MyString
+  : 2013-11-20
+  match_from: MyString
+  : 2013-11-20 15:25:04
+  match_to: MyString
+  : 2013-11-20 15:25:04
+  match_location: MyString
+  : MyString
+  match_ground: MyString
+  : MyString
+  match_details: MyString
+  : MyText
+
+two:
+  match_date: MyString
+  : 2013-11-20
+  match_from: MyString
+  : 2013-11-20 15:25:04
+  match_to: MyString
+  : 2013-11-20 15:25:04
+  match_location: MyString
+  : MyString
+  match_ground: MyString
+  : MyString
+  match_details: MyString
+  : MyText
