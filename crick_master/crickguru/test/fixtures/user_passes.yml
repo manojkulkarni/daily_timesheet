@@ -2,16 +2,10 @@
 
 one:
   password: MyString
-  : MyString
   salt: MyString
-  : MyString
   security_a: MyString
-  : MyString
 
 two:
   password: MyString
-  : MyString
   salt: MyString
-  : MyString
   security_a: MyString
-  : MyString

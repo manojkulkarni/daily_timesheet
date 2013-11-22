@@ -2,36 +2,20 @@
 
 one:
   player_name: MyString
-  : MyString
   player_contry: MyString
-  : MyString
   player_role: MyString
-  : MyString
   player_type: MyString
-  : MyString
-  player_photo: MyString
-  : 
-  player_points: MyString
-  : 1
-  player_details: MyString
-  : MyText
-  player_cost: MyString
-  : 1
+  player_photo: 
+  player_points: 1
+  player_details: MyText
+  player_cost: 1
 
 two:
   player_name: MyString
-  : MyString
   player_contry: MyString
-  : MyString
   player_role: MyString
-  : MyString
   player_type: MyString
-  : MyString
-  player_photo: MyString
-  : 
-  player_points: MyString
-  : 1
-  player_details: MyString
-  : MyText
-  player_cost: MyString
-  : 1
+  player_photo: 
+  player_points: 1
+  player_details: MyText
+  player_cost: 1

@@ -2,32 +2,18 @@
 
 one:
   team_name: MyString
-  : MyString
   team_contry: MyString
-  : MyString
   team_abbr: MyString
-  : MyString
-  team_logo: MyString
-  : 
-  team_test_rank: MyString
-  : 1
-  team_odi_rank: MyString
-  : 1
-  team_tt_rank: MyString
-  : 1
+  team_logo: 
+  team_test_rank: 1
+  team_odi_rank: 1
+  team_tt_rank: 1
 
 two:
   team_name: MyString
-  : MyString
   team_contry: MyString
-  : MyString
   team_abbr: MyString
-  : MyString
-  team_logo: MyString
-  : 
-  team_test_rank: MyString
-  : 1
-  team_odi_rank: MyString
-  : 1
-  team_tt_rank: MyString
-  : 1
+  team_logo: 
+  team_test_rank: 1
+  team_odi_rank: 1
+  team_tt_rank: 1

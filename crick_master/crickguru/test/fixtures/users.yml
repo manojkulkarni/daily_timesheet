@@ -2,52 +2,28 @@
 
 one:
   user_id: MyString
-  : MyString
   user_name: MyString
-  : MyString
   email_id: MyString
-  : MyString
-  ph_number: MyString
-  : 1
-  address: MyString
-  : MyText
+  ph_number: 1
+  address: MyText
   city: MyString
-  : MyString
   state: MyString
-  : MyString
   contry: MyString
-  : MyString
-  other_details: MyString
-  : MyText
-  PoL: MyString
-  : 
-  PoA: MyString
-  : 
+  other_details: MyText
+  PoL: 
+  PoA: 
   team_name: MyString
-  : MyString
 
 two:
   user_id: MyString
-  : MyString
   user_name: MyString
-  : MyString
   email_id: MyString
-  : MyString
-  ph_number: MyString
-  : 1
-  address: MyString
-  : MyText
+  ph_number: 1
+  address: MyText
   city: MyString
-  : MyString
   state: MyString
-  : MyString
   contry: MyString
-  : MyString
-  other_details: MyString
-  : MyText
-  PoL: MyString
-  : 
-  PoA: MyString
-  : 
+  other_details: MyText
+  PoL: 
+  PoA: 
   team_name: MyString
-  : MyString

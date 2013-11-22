@@ -2,12 +2,8 @@
 
 one:
   squad_pattern: MyString
-  : MyString
-  icon: MyString
-  : 
+  icon: 
 
 two:
   squad_pattern: MyString
-  : MyString
-  icon: MyString
-  : 
+  icon: 
