@@ -11,3 +11,7 @@
  *= require_self
  *= require_tree .
  */
+ .sample_class{
+ 	height: 10 px;
+ 	color: red ;
+ }
