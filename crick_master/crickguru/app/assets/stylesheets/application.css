@@ -15,3 +15,11 @@
  	height: 10 px;
  	color: red ;
  }
+
+ .background_image_login{
+     background-image: url("melbourne__cricket_ground.jpg");
+/*     background-repeat: no-repeat;*/
+     background-position: center;
+     height: 100%;
+     width: 100%;
+}
