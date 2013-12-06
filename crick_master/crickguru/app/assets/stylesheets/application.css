@@ -17,6 +17,11 @@
  }*/
 
  .message_div{
+     margin-top: 20px;
+}
+
+.yeild-div{
+    margin-top: 20px;
 }
 
 .header-logo{
@@ -45,9 +50,11 @@ body{
 .notice{
     color: green;
     text-align: center;
+    font-size: medium;
 }
 
 .alert{
     color: red;
     text-align: center;
+    font-size: medium;
 }
