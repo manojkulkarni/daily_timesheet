@@ -11,15 +11,39 @@
  *= require_self
  *= require_tree .
  */
- .sample_class{
+/* .sample_class{
  	height: 10 px;
  	color: red ;
- }
+ }*/
 
- .background_image_login{
-     background-image: url("melbourne__cricket_ground.jpg");
-/*     background-repeat: no-repeat;*/
+ .message_div{
+     margin: 10px;
+}
+
+body{
+    background-image: url("Grey-background-for-site1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* .background_image_login{
+     background-image: url("20060730223823_crw_8091s.jpg");
+     background-repeat: no-repeat;
      background-position: center;
+     background-image: inherit;
      height: 100%;
      width: 100%;
+     margin: 0px;
+     padding: 0px;
+
+}*/
+
+.notice{
+    color: green;
+    text-align: center;
+}
+
+.alert{
+    color: red;
+    text-align: center;
 }
