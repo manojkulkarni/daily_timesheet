@@ -1,47 +1,66 @@
-<div class="container form-signin">
-<h2 class="form-signin-heading">Sign up</h2>
+<div class="row">
+  <div class="col-md-6"></div>
+  <div class="col-md-6"></div>
+</div>
+<div class="container jumbotron">
+  <h2 class="form-signin-heading">Sign up</h2>
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+    <div class="row">
+      <div class="col-md-5"> Full Name
+        <%= f.text_field :user_name, :autofocus => true, :class => 'form-control required autofocus' %></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-5">Phone Number
+        <%= f.text_field :ph_number, :autofocus => true, :class => 'form-control required autofocus' %></div>
+    </div>
 
-  <div><%= f.label 'Full Name' %>
-  <%= f.text_field :user_name, :autofocus => true, :class => 'form-control required autofocus' %></div>
+    <div class="row">
+      <div class="col-md-5">Address
+        <%= f.text_area :ph_number, :autofocus => true, :class => 'form-control required autofocus' %></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-5">City
+        <%= f.text_field :city, :autofocus => true, :class => 'form-control required autofocus' %></div>
+    </div>
 
-  <div><%= f.label 'Phone Number' %>
-  <%= f.text_field :ph_number, :autofocus => true, :class => 'form-control required autofocus' %></div>
+    <div class="row">
+      <div class="col-md-5">State
+        <%= f.text_field :state, :autofocus => true, :class => 'form-control required autofocus' %></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-5">Country
+        <%= f.text_field :contry, :autofocus => true, :class => 'form-control required autofocus' %></div>
+    </div>
 
-  <div><%= f.label 'Adderss' %>
-  <%= f.text_area :ph_number, :autofocus => true, :class => 'form-control required autofocus' %></div>
+    <div class="row">
+      <div class="col-md-5">Proof of Identity
+        <%= f.file_field :PoL, :autofocus => true, :class => 'form-control required autofocus' %></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-5">Proof of Address
+        <%= f.file_field :PoA, :autofocus => true, :class => 'form-control required autofocus' %></div>
+    </div>
 
-  <div><%= f.label 'City' %>
-  <%= f.text_field :city, :autofocus => true, :class => 'form-control required autofocus' %></div>
+    <div class="row">
+      <div class="col-md-5">Choose name for your team
+        <%= f.text_field :team_name, :autofocus => true, :class => 'form-control required autofocus' %></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-5">Email Id
+        <%= f.email_field :email, :autofocus => true, :class => 'form-control required autofocus' %></div>
+    </div>
 
-  <div><%= f.label 'State' %>
-  <%= f.text_field :state, :autofocus => true, :class => 'form-control required autofocus' %></div>
+    <div class="row">
+      <div class="col-md-5">Password
+        <%= f.password_field :password , :class => 'form-control required autofocus'%></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-5">Password Confirmation
+        <%= f.password_field :password_confirmation, :class => 'form-control required autofocus' %></div>
+    </div>
+    <div><br/></div>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4"><%= f.submit "Sign up", :class => "btn btn-lg btn-primary btn-block" %>
+      <% end %>
+      <%= render "devise/shared/links" %></div>
+    <div class="col-md-4"></div>
+  </div>
 
-  <div><%= f.label 'Contry' %>
-  <%= f.text_field :contry, :autofocus => true, :class => 'form-control required autofocus' %></div>
-
-  <div><%= f.label 'Proof of Identity' %>
-  <%= f.file_field :PoL, :autofocus => true, :class => 'form-control required autofocus' %></div>
-
-  <div><%= f.label 'Proof of Address' %>
-  <%= f.file_field :PoA, :autofocus => true, :class => 'form-control required autofocus' %></div>
-
-  <div><%= f.label 'Choose name for your team' %>
-  <%= f.text_field :team_name, :autofocus => true, :class => 'form-control required autofocus' %></div>
-
-  <div><%= f.label :email %>
-  <%= f.email_field :email, :autofocus => true, :class => 'form-control required autofocus' %></div>
-
-  <div><%= f.label :password %>
-  <%= f.password_field :password , :class => 'form-control required autofocus'%></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation, :class => 'form-control required autofocus' %></div>
-
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
-
-<%= render "devise/shared/links" %>
 </div>
