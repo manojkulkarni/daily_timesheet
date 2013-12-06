@@ -8,21 +8,24 @@
   </head>
   <body>
     <div>
-      
-        <%= render 'shared/header' %>
-      
+
+      <%= render 'shared/header' %>
+
     </div>
     <div class="message_div">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    </div>
-    <div class="container">
-      <%= yield %>
-    </div>
-  </body>
-  <div>
-      <% if current_user %>
-        <%= render 'shared/footer' %>
+      <% if notice %>
+        <p class="notice"><%= notice %></p>
+      <% elsif alert %>
+        <p class="alert"><%= alert %></p>
       <% end %>
     </div>
+    
+      <%= yield %>
+    
+  </body>
+  <div>
+    <% if current_user %>
+      <%= render 'shared/footer' %>
+    <% end %>
+  </div>
 </html>
