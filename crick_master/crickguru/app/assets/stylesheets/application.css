@@ -51,10 +51,12 @@ body{
     color: green;
     text-align: center;
     font-size: medium;
+    font-weight: bold;
 }
 
 .alert{
-    color: red;
+    color: #c9302c;
     text-align: center;
     font-size: medium;
+    font-weight: bold;
 }

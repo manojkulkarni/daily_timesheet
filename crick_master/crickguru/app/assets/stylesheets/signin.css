@@ -8,6 +8,12 @@ body {
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
+  border: whitesmoke;
+  border-style: groove;
+  border-width: 1px;
+  background-image: url('halloffame_cricket.png');
+  background-repeat: no-repeat;
+  background-position: right;
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
