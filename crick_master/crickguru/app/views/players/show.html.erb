@@ -1,0 +1,27 @@
+<%= debug @player.inspect %>
+
+<div class="container jumbotron">
+  <div class="page-header">
+    <h2> Player Information </h2>
+  </div>
+  <div class="row">
+    <h2><%= @player.player_name %></h2>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">Country: <%= @player.player_contry %> </div>
+    <div class="col-xs-4">Points:  <%= @player.player_points %> </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">Role:  <%= @player.player_role %></div>
+    <div class="col-xs-6">Player Type:  <%= @player.player_type %></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">Cost:  <%= @player.player_cost %></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">Other Details:  <%= @player.player_details %></div>
+  </div>
+  <div>
+    <%= button_to 'Back to list', players_path, method: :get %>
+  </div>
+</div>

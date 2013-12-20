@@ -1,0 +1,17 @@
+<div class="container jumbotron">
+  <div class="page-header">
+  <h2> List of the players </h2>
+  </div>
+  <% @players.each do |player| %>
+  <div class="row">
+        <div class="col-xs-4"><%= player.player_name %></div>
+        <div class="col-xs-2"><%= player.player_contry %></div>
+        <div class="col-xs-2"><%= player.player_points %></div>
+        <div class="col-xs-2"><%= player.player_cost %></div>
+        <div class="col-xs-2"><%= link_to 'Edit' %>/<%= link_to 'Delete' %></div>
+  </div>
+  <% end %>
+  <div>
+    <%= button_to 'Add Player', new_player_path , method: :get %>
+  </div>
+</div>

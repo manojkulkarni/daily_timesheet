@@ -13,11 +13,8 @@
     <% if current_user %>
       <div class="navbar-collapse collapse">
         <% if is_admin_user? %>
-        <ul class="nav navbar-nav">
-          <li><%= link_to 'Add Player' %></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li class="active"><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+          <ul class="nav navbar-nav">
+            <li><%= link_to 'Players', players_path %></li>
           </ul>
         <% else %>
 
@@ -38,13 +35,14 @@
     <%#*</ul>%>
     <%#*</li>%>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-    <%#*<li><a href="../navbar/">Default</a></li>%>
-    <%#*<li><a href="../navbar-static-top/">Static top</a></li>%>
-            <li class="active"><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
-          </ul>
-
         <% end %>
+        <ul class="nav navbar-nav navbar-right">
+  <%#*<li><a href="../navbar/">Default</a></li>%>
+  <%#*<li><a href="../navbar-static-top/">Static top</a></li>%>
+          <li class="active"><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+        </ul>
+
+
       </div><!--/.nav-collapse -->
     <% end %>
   </div>
