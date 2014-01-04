@@ -1,0 +1,24 @@
+<%= debug @team.inspect %>
+
+<div class="container jumbotron">
+  <div class="page-header">
+    <h2> Team Information </h2>
+  </div>
+  <div class="row">
+    <h2><%= @team.team_name %></h2>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">Country: <%= @team.team_contry %> </div>
+    <div class="col-xs-4">Abbrivation:  <%= @team.team_abbr %> </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">Test Rank:  <%= @team.team_test_rank %></div>
+    <div class="col-xs-6">ODI Rank:  <%= @team.team_odi_rank %></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">20-20 Rank:  <%= @team.team_tt_rank %></div>
+  </div>
+  <div class="row">
+    <%= button_to 'Back to list', teams_path, method: :get %>
+  </div>
+</div>

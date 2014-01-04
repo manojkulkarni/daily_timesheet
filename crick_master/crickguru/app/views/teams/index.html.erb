@@ -1,0 +1,20 @@
+<div class="container jumbotron">
+  <div class="page-header">
+  <h2> List of Teams </h2>
+  </div>
+  <% @teams.each do |team| %>
+     <%= debug team.inspect %>
+  <div class="row">
+        <div class="col-xs-3"><%= team.team_name %></div>
+        <div class="col-xs-2"><%= team.team_contry %></div>
+        <div class="col-xs-1"><%= team.team_abbr %></div>
+        <div class="col-xs-1"><%= team.team_test_rank %></div>
+        <div class="col-xs-1"><%= team.team_odi_rank %></div>
+        <div class="col-xs-1"><%= team.team_tt_rank %></div>
+        <div class="col-xs-2"><%= link_to 'Edit' %>/<%= link_to 'Delete' %></div>
+  </div>
+  <% end %>
+  <div>
+    <%= button_to 'Add Team', new_team_path , method: :get %>
+  </div>
+</div>
