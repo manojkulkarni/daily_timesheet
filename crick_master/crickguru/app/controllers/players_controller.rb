@@ -10,13 +10,37 @@ class PlayersController < ApplicationController
   end
 
   def create
-    @player = Player.new(params[:player].permit(:player_name,:player_contry,:player_role,:player_type,:player_points,:player_cost,:player_details))
+    @player = Player.new(player_attributes)
     @player.save
     redirect_to @player
   end
 
   def show
     @player = Player.find(params[:id])
+    
+  end
+
+  def edit
+    @player = Player.find(params[:id])
+  end
+
+  def update
+    @player = Player.find(params[:id])
+    @player.update_attributes(player_attributes)
+    redirect_to player_path(params[:id])
+    flash[:notice] = "Player is updated successfully"
+  end
+
+  def destroy
+    Player.destroy(params[:id])
+    redirect_to players_path
+    flash[:notice] = "Successfuly deleted player"
+  end
+  
+  
+  private
+  def player_attributes
+    params[:player].permit(:player_name,:player_contry,:player_role,:player_type,:player_points,:player_cost,:player_details)
   end
 
 end

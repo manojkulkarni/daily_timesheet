@@ -2,13 +2,20 @@
   <div class="page-header">
   <h2> List of the players </h2>
   </div>
+  <div class="row">
+    <div class="col-xs-4"><h3><b> Player name </b></h3></div>
+        <div class="col-xs-2"><h3><b> Player country </b></h3></div>
+        <div class="col-xs-2"><h3><b> Player points </b></h3></div>
+        <div class="col-xs-2"><h3><b> Player cost </b></h3></div>
+        <div class="col-xs-2"><h3><b> Options  </b></h3></div>
+  </div>
   <% @players.each do |player| %>
   <div class="row">
         <div class="col-xs-4"><%= player.player_name %></div>
         <div class="col-xs-2"><%= player.player_contry %></div>
         <div class="col-xs-2"><%= player.player_points %></div>
         <div class="col-xs-2"><%= player.player_cost %></div>
-        <div class="col-xs-2"><%= link_to 'Edit' %>/<%= link_to 'Delete' %></div>
+        <div class="col-xs-2"><%= link_to 'Edit', edit_player_path(player.id) %>/<%= link_to 'Delete', player_path(player.id), :method => 'delete', :confirm => 'Record will be deleted. Are you sure?'  %></div>
   </div>
   <% end %>
   <div>

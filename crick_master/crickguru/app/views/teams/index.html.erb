@@ -2,8 +2,16 @@
   <div class="page-header">
   <h2> List of Teams </h2>
   </div>
+  <div class="row">
+    <div class="col-xs-3"><h3><b> Team name </b></h3></div>
+        <div class="col-xs-2"><h3><b> Team country </b></h3></div>
+        <div class="col-xs-1"><h3><b> Abbr. </b></h3></div>
+        <div class="col-xs-1"><h3><b> Test Rank </b></h3></div>
+        <div class="col-xs-1"><h3><b> ODI Rank  </b></h3></div>
+        <div class="col-xs-1"><h3><b> 20-20 Rank  </b></h3></div>
+        <div class="col-xs-2"><h3><b> Options  </b></h3></div>
+  </div>
   <% @teams.each do |team| %>
-     <%= debug team.inspect %>
   <div class="row">
         <div class="col-xs-3"><%= team.team_name %></div>
         <div class="col-xs-2"><%= team.team_contry %></div>
@@ -11,7 +19,7 @@
         <div class="col-xs-1"><%= team.team_test_rank %></div>
         <div class="col-xs-1"><%= team.team_odi_rank %></div>
         <div class="col-xs-1"><%= team.team_tt_rank %></div>
-        <div class="col-xs-2"><%= link_to 'Edit' %>/<%= link_to 'Delete' %></div>
+        <div class="col-xs-2"><%= link_to 'Edit' %>/<%= link_to 'Delete', team_path(team.id), :method => 'delete', :confirm => 'Record will be deleted. Are you sure?'%></div>
   </div>
   <% end %>
   <div>

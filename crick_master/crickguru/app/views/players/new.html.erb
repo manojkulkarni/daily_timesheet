@@ -1,38 +1,4 @@
 <div class="container jumbotron">
   <h2 class="form-signin-heading">Player's Information</h2>
-  <%= form_for @player do |f|%>
-    <div class="row">
-      <div class="col-md-5"> Players Name
-          <%= f.text_field :player_name, :class => 'form-control autofocus' %></div>
-      <div class="col-md-2"></div>
-      <div class="col-md-5"> Country
-        <%= f.text_field :player_contry, :class => 'form-control autofocus' %></div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-5"> Role of the player
-          <%= f.text_field :player_role, :class => 'form-control autofocus' %></div>
-      <div class="col-md-2"></div>
-      <div class="col-md-5"> Player Type
-        <%= f.text_field :player_type, :class => 'form-control autofocus' %></div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-5"> Players Photo
-          <%= f.file_field :player_photo, :class => 'form-control autofocus' %></div>
-      <div class="col-md-2"></div>
-      <div class="col-md-5"> Player Points
-        <%= f.text_field :player_points, :class => 'form-control autofocus' %></div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-5"> Players cost
-          <%= f.text_field :player_cost, :class => 'form-control autofocus' %></div>
-      <div class="col-md-2"></div>
-      <div class="col-md-5"> Other details
-        <%= f.text_area :player_details, :class => 'form-control autofocus' %></div>
-    </div>
-
-    <%= f.submit 'save' %>
-  <% end %>
+  <%= render 'player_form' %>
 </div>
