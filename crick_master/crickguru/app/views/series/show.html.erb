@@ -1,0 +1,23 @@
+<div class="container jumbotron">
+  <div class="page-header">
+    <h2> Series Information </h2>
+  </div>
+  <div class="row">
+    <h2><%= @series.series_name %></h2>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">Location: <%= @series.series_location %> </div>
+    <div class="col-xs-4">Type:  <%= @series.series_type %> </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">From:  <%= @series.series_date_from %></div>
+    <div class="col-xs-4">To:  <%= @series.series_date_to %></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">Description:  <%= @series.series_desc %></div>
+    <div class="col-xs-4">Result:  <%= @series.series_result %></div>
+  </div>
+  <div class="row">
+    <%= button_to 'Back to list', series_index_path, method: :get %>
+  </div>
+</div>

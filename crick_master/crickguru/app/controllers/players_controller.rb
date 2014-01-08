@@ -16,16 +16,15 @@ class PlayersController < ApplicationController
   end
 
   def show
-    @player = Player.find(params[:id])
-    
+    @player = find_player
   end
 
   def edit
-    @player = Player.find(params[:id])
+    @player = find_player
   end
 
   def update
-    @player = Player.find(params[:id])
+    @player = find_player
     @player.update_attributes(player_attributes)
     redirect_to player_path(params[:id])
     flash[:notice] = "Player is updated successfully"
@@ -39,8 +38,13 @@ class PlayersController < ApplicationController
   
   
   private
+
   def player_attributes
     params[:player].permit(:player_name,:player_contry,:player_role,:player_type,:player_points,:player_cost,:player_details)
+  end
+
+  def find_player
+    Player.find(params[:id])
   end
 
 end

@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function ($) {
+
+    $("#series_series_date_from" ).datepicker({
+        dateFormat: 'dd-mm-yy'
+    });
+
+    $("#series_series_date_to" ).datepicker({
+        dateFormat: 'dd-mm-yy'
+    });
+
+})

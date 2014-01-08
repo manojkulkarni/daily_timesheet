@@ -1,0 +1,33 @@
+<%= form_for @team do |f|%>
+    <div class="row">
+      <div class="col-md-5"> Team Name
+        <%= f.text_field :team_name, :class => 'form-control autofocus' %></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-5"> Country
+        <%= f.text_field :team_contry, :class => 'form-control autofocus' %></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-5"> Team Abbrivation
+        <%= f.text_field :team_abbr, :class => 'form-control autofocus' %></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-5"> Logo
+        <%= f.file_field :team_logo, :class => 'form-control autofocus' %></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-5"> Test Rank
+        <%= f.text_field :team_test_rank, :class => 'form-control autofocus' %></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-5"> ODI Rank
+        <%= f.text_field :team_odi_rank, :class => 'form-control autofocus' %></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-5"> 20-20 Rank
+        <%= f.text_field :team_tt_rank, :class => 'form-control autofocus' %></div>
+    </div>
+      <div class="row">
+        <%= f.submit 'save' %>
+      </div>
+    <% end %>

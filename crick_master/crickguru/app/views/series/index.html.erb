@@ -1,0 +1,28 @@
+<div class="container jumbotron">
+  <div class="page-header">
+  <h2> List of Series </h2>
+  </div>
+  <div class="row">
+    <div class="col-xs-2"><h3><b> Series Name </b></h3></div>
+        <div class="col-xs-1"><h3><b> Series Location </b></h3></div>
+        <div class="col-xs-2"><h3><b> From </b></h3></div>
+        <div class="col-xs-2"><h3><b> To </b></h3></div>
+        <div class="col-xs-1"><h3><b> Type  </b></h3></div>
+        <div class="col-xs-2"><h3><b> Result  </b></h3></div>
+        <div class="col-xs-2"><h3><b> Options  </b></h3></div>
+  </div>
+  <% @series.each do |rec| %>
+  <div class="row">
+        <div class="col-xs-2"><%= rec.series_name %></div>
+        <div class="col-xs-1"><%= rec.series_location %></div>
+        <div class="col-xs-2"><%= rec.series_date_from %></div>
+        <div class="col-xs-2"><%= rec.series_date_to %></div>
+        <div class="col-xs-1"><%= rec.series_type %></div>
+        <div class="col-xs-2"><%= rec.series_result %></div>
+        <div class="col-xs-2"><%= link_to 'Edit', edit_series_path(rec.id) %>/<%= link_to 'Delete', series_path(rec.id), :method => 'delete', :confirm => 'Record will be deleted. Are you sure?'%></div>
+  </div>
+  <% end %>
+  <div>
+    <%= button_to 'Add Series', new_series_path , method: :get %>
+  </div>
+</div>
